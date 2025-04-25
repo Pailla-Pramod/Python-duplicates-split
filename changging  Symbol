@@ -1,0 +1,3 @@
+df_arnd['Construction year'] = pd.to_numeric(df_arnd['Construction year'].replace('[$,]', '', regex=True), errors='coerce')
+df_arnd['price'] = pd.to_numeric(df_arnd['price'].replace('[$,]', '', regex=True), errors='coerce')
+df_arnd
