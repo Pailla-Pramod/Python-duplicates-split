@@ -1,0 +1,8 @@
+df[['MIN_SALARY', 'MAX_SALARY']] = df['SALARY'].str.split('-', expand=True)
+
+# Strip spaces and convert to float
+df['MIN_SALARY'] = pd.to_numeric(df['MIN_SALARY'].str.strip(), errors='coerce')
+df['MAX_SALARY'] = pd.to_numeric(df['MAX_SALARY'].str.strip(), errors='coerce')
+
+# Calculate AVG_SALARY
+df['AVG_SALARY'] = (df['MIN_SALARY'] + df['MAX_SALARY']) / 2
