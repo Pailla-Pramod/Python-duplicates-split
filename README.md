@@ -22,3 +22,6 @@ print(os.getcwd())
 
 #To cross check the values
 duplicate_rows_unique.head(10)
+
+#TO DROP THE DUPLICATE VALUES
+df_arnd.drop_duplicates(inplace=True)
